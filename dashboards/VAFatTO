@@ -1,5 +1,5 @@
 {
-  "title": "VAF@TO",
+  "title": "VAF",
   "services": {
     "query": {
       "list": {
@@ -29,12 +29,62 @@
           "type": "lucene",
           "enable": true,
           "query": "proofuser:svallero"
+        },
+        "3": {
+          "id": 3,
+          "color": "#EF843C",
+          "alias": "strogolo",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "proofuser:strogolo"
+        },
+        "4": {
+          "id": 4,
+          "color": "#E24D42",
+          "alias": "ycorrale",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "proofuser:ycorrale"
+        },
+        "5": {
+          "id": 5,
+          "color": "#1F78C1",
+          "alias": "venaruzz",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "proofuser:venaruzz"
+        },
+        "6": {
+          "id": 6,
+          "color": "#BA43A9",
+          "alias": "mleoncin",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "proofuser:mleoncin"
+        },
+        "7": {
+          "id": 7,
+          "color": "#705DA0",
+          "alias": "mpuccio",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "proofuser:mpuccio"
         }
       },
       "ids": [
         0,
         1,
-        2
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
       ]
     },
     "filter": {
@@ -42,21 +92,12 @@
         "0": {
           "type": "time",
           "field": "@timestamp",
-          "from": "now-7d",
+          "from": "now-30d",
           "to": "now",
           "mandate": "must",
           "active": true,
           "alias": "",
           "id": 0
-        },
-        "1": {
-          "type": "field",
-          "field": "table",
-          "query": "\"proofjoinld\"",
-          "mandate": "must",
-          "active": true,
-          "alias": "",
-          "id": 1
         }
       },
       "ids": [
@@ -130,11 +171,16 @@
             "min": 0
           },
           "queries": {
-            "mode": "selected",
+            "mode": "all",
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "annotate": {
@@ -149,7 +195,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "12h",
           "intervals": [
             "auto",
             "1s",
@@ -209,7 +255,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "annotate": {
@@ -224,7 +275,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "12h",
           "intervals": [
             "auto",
             "1s",
@@ -294,7 +345,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "annotate": {
@@ -309,7 +365,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "12h",
           "intervals": [
             "auto",
             "1s",
@@ -369,7 +425,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "annotate": {
@@ -384,7 +445,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "12h",
           "intervals": [
             "auto",
             "1s",
@@ -454,7 +515,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "annotate": {
@@ -469,7 +535,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "12h",
           "intervals": [
             "auto",
             "1s",
@@ -529,7 +595,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "annotate": {
@@ -544,7 +615,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "12h",
           "intervals": [
             "auto",
             "1s",
@@ -622,7 +693,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "tmode": "terms",
@@ -657,7 +733,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "tmode": "terms",
@@ -692,7 +773,12 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
             ]
           },
           "tmode": "terms",
@@ -737,7 +823,9 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4
             ]
           },
           "tmode": "terms",
@@ -752,7 +840,7 @@
       "title": "Entries",
       "height": "150px",
       "editable": true,
-      "collapse": false,
+      "collapse": true,
       "collapsable": true,
       "panels": [
         {
@@ -789,7 +877,7 @@
           },
           "auto_int": true,
           "resolution": 100,
-          "interval": "10m",
+          "interval": "1h",
           "intervals": [
             "auto",
             "1s",
@@ -860,7 +948,9 @@
             "ids": [
               0,
               1,
-              2
+              2,
+              3,
+              4
             ]
           },
           "style": {
