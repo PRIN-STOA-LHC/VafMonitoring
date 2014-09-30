@@ -88,7 +88,7 @@ class LogStash::Inputs::Mysql < LogStash::Inputs::Base
   def init_placeholder(db, since_table, table)
     @logger.debug("init placeholder for #{table}")
     since = db[:"#{since_table}"]
-    since.insert(:table => table, :place => 0)
+    since.insert(:table => table, :place => -1)
   end
 
   public
